@@ -25,7 +25,7 @@ namespace Version_2._0_Proyecto
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("═══════════════════════════════════════════════════════════");
-                Console.WriteLine("      🔥 SISTEMA CONTRA INCENDIOS INTELIGENTE - SCI 🔥");
+                Console.WriteLine("       SISTEMA CONTRA INCENDIOS INTELIGENTE - SCI ");
                 Console.WriteLine("═══════════════════════════════════════════════════════════");
                 Console.ResetColor();
                 Console.WriteLine("[1] Mostrar zonas de sensores");
