@@ -36,7 +36,7 @@ namespace Version_2._0_Proyecto
                 Console.Write("\nSeleccione una opción: ");
                 opcion = int.Parse(Console.ReadLine());
 
-                // Procesar opción seleccionada
+                
                 switch (opcion)
                 {
                     case 1:
@@ -54,10 +54,10 @@ namespace Version_2._0_Proyecto
                         s3 = random.Next(25, 101);
                         s4 = random.Next(25, 101);
 
-                        Console.WriteLine($"🌡 Zona A - Generador: {s1}°C");
-                        Console.WriteLine($"🌡 Zona B - Sala de control: {s2}°C");
-                        Console.WriteLine($"🌡 Zona C - Almacén combustible: {s3}°C");
-                        Console.WriteLine($"🌡 Zona D - Transformadores: {s4}°C");
+                        Console.WriteLine("Zona A - Generador: "+s1+"°C");
+                        Console.WriteLine("Zona B - Sala de control: "+s2+"°C");
+                        Console.WriteLine("Zona C - Almacén combustible: "+s3+"°C");
+                        Console.WriteLine("Zona D - Transformadores: "+s4+"°C");
 
                         int peligros = 0;
                         if (s1 >= 70) peligros++;
@@ -81,7 +81,7 @@ namespace Version_2._0_Proyecto
                         {
                             alarmaActiva = false;
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("✅ Sistema estable. Todas las zonas seguras.");
+                            Console.WriteLine("Sistema estable. Todas las zonas seguras.");
                             Console.ResetColor();
                         }
 
@@ -97,22 +97,22 @@ namespace Version_2._0_Proyecto
                     case 4:
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("🔄 Restableciendo sistema...");
+                        Console.WriteLine("Restableciendo sistema...");
                         alarmaActiva = false;
                         Thread.Sleep(1200);
-                        Console.WriteLine("✅ Sistema restablecido con éxito.");
+                        Console.WriteLine("Sistema restablecido con éxito.");
                         Console.ResetColor();
                         Thread.Sleep(800);
                         break;
 
                     case 0:
-                        Console.WriteLine("\n👋 Cerrando el sistema...");
+                        Console.WriteLine("\nCerrando el sistema...");
                         Thread.Sleep(800);
                         break;
 
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("❌ Opción inválida. Intente nuevamente.");
+                        Console.WriteLine("Opción inválida. Intente nuevamente.");
                         Console.ResetColor();
                         Thread.Sleep(1000);
                         break;
@@ -121,7 +121,7 @@ namespace Version_2._0_Proyecto
             } while (opcion != 0);
 
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("\nGracias por confiar en SCI Systems 🏢 – España 🇪🇸");
+            Console.WriteLine("\nGracias por confiar en SCI Systems");
             Console.WriteLine("Protegiendo instalaciones con tecnología inteligente 🔥");
             Console.ResetColor();
         }
