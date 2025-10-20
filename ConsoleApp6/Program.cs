@@ -17,7 +17,7 @@ namespace Version_2._0_Proyecto
             bool alarmaActiva = false;
             int opcion;
 
-            // Variables de sensores
+            // Sensores
             double s1 = 0, s2 = 0, s3 = 0, s4 = 0;
 
             do
