@@ -25,7 +25,7 @@ namespace Version_2._0_Proyecto
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("═══════════════════════════════════════════════════════════");
-                Console.WriteLine("       SISTEMA CONTRA INCENDIOS INTELIGENTE - SCI jsdjssnscnw,dsjbkwgkcujsgcuwkjcvwuhcvwh");
+                Console.WriteLine("       SISTEMA CONTRA INCENDIOS INTELIGENTE - SCI          ");
                 Console.WriteLine("═══════════════════════════════════════════════════════════");
                 Console.ResetColor();
                 Console.WriteLine("[1] Mostrar zonas de sensores");
@@ -36,6 +36,7 @@ namespace Version_2._0_Proyecto
                 Console.Write("\nSeleccione una opción: ");
                 opcion = int.Parse(Console.ReadLine());
 
+                // Procesar opción seleccionada
                 switch (opcion)
                 {
                     case 1:
