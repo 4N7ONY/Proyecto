@@ -9,14 +9,11 @@ namespace Version_2._0_Proyecto
 {
     internal class Program
     {
-
-
         static void Main(string[] args)
         {
             Random random = new Random();
             bool alarmaActiva = false;
             int opcion;
-
             // Sensores
             double s1 = 0, s2 = 0, s3 = 0, s4 = 0;
 
@@ -36,7 +33,6 @@ namespace Version_2._0_Proyecto
                 Console.Write("\nSeleccione una opción: ");
                 opcion = int.Parse(Console.ReadLine());
 
-                
                 switch (opcion)
                 {
                     case 1:
@@ -54,10 +50,10 @@ namespace Version_2._0_Proyecto
                         s3 = random.Next(25, 101);
                         s4 = random.Next(25, 101);
 
-                        Console.WriteLine("Zona A - Generador: "+s1+"°C");
-                        Console.WriteLine("Zona B - Sala de control: "+s2+"°C");
-                        Console.WriteLine("Zona C - Almacén combustible: "+s3+"°C");
-                        Console.WriteLine("Zona D - Transformadores: "+s4+"°C");
+                        Console.WriteLine("Zona A - Generador: " + s1 + "°C");
+                        Console.WriteLine("Zona B - Sala de control: " + s2 + "°C");
+                        Console.WriteLine("Zona C - Almacén combustible: " + s3 + "°C");
+                        Console.WriteLine("Zona D - Transformadores: " + s4 + "°C");
 
                         int peligros = 0;
                         if (s1 >= 70) peligros++;
@@ -122,7 +118,7 @@ namespace Version_2._0_Proyecto
 
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\nGracias por confiar en SCI Systems");
-            Console.WriteLine("Protegiendo instalaciones con tecnología inteligente 🔥");
+            Console.WriteLine("Protegiendo instalaciones con tecnología inteligente");
             Console.ResetColor();
         }
 
@@ -133,11 +129,11 @@ namespace Version_2._0_Proyecto
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("=== UBICACIÓN DE SENSORES ===\n");
             Console.ResetColor();
-            Console.WriteLine("📍 Sensor 1 → Zona A: Generador principal");
-            Console.WriteLine("📍 Sensor 2 → Zona B: Sala de control");
-            Console.WriteLine("📍 Sensor 3 → Zona C: Almacén de combustible");
-            Console.WriteLine("📍 Sensor 4 → Zona D: Área de transformadores");
-            Console.WriteLine("\n💡 Todos los sensores activos y operativos.");
+            Console.WriteLine(" Sensor 1 → Zona A: Generador principal");
+            Console.WriteLine(" Sensor 2 → Zona B: Sala de control");
+            Console.WriteLine(" Sensor 3 → Zona C: Almacén de combustible");
+            Console.WriteLine(" Sensor 4 → Zona D: Área de transformadores");
+            Console.WriteLine("\n Todos los sensores activos y operativos.");
             Console.WriteLine("\nPresione ENTER para volver al menú...");
             Console.ReadLine();
         }
@@ -146,7 +142,7 @@ namespace Version_2._0_Proyecto
         static void EmergenciaFuego(double s1, double s2, double s3, double s4)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("🔥🔥🔥 ¡EMERGENCIA! INCENDIO DETECTADO 🔥🔥🔥");
+            Console.WriteLine(" ¡EMERGENCIA! INCENDIO DETECTADO ");
             Console.ResetColor();
 
             MostrarZonasCriticas(s1, s2, s3, s4);
@@ -160,7 +156,7 @@ namespace Version_2._0_Proyecto
         static void AlertaSobrecalentamiento(double s1, double s2, double s3, double s4)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("⚠ ALERTA: Sobrecalentamiento detectado ⚠");
+            Console.WriteLine(" ALERTA: Sobrecalentamiento detectado ");
             Console.ResetColor();
 
             MostrarZonasCriticas(s1, s2, s3, s4);
@@ -168,19 +164,19 @@ namespace Version_2._0_Proyecto
             Thread.Sleep(500);
 
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\n🧰 Enviando alerta a mantenimiento técnico...");
+            Console.WriteLine("\n Enviando alerta a mantenimiento técnico...");
             Thread.Sleep(1500);
-            Console.WriteLine("✅ Revisión técnica urgente programada.");
+            Console.WriteLine(" Revisión técnica urgente programada.");
             Console.ResetColor();
         }
 
         // 🔹 Muestra zonas afectadas
         static void MostrarZonasCriticas(double s1, double s2, double s3, double s4)
         {
-            if (s1 >= 70) Console.WriteLine("🚨 Zona A (Generador principal) crítica!");
-            if (s2 >= 70) Console.WriteLine("🚨 Zona B (Sala de control) crítica!");
-            if (s3 >= 70) Console.WriteLine("🚨 Zona C (Almacén combustible) crítica!");
-            if (s4 >= 70) Console.WriteLine("🚨 Zona D (Transformadores) crítica!");
+            if (s1 >= 70) Console.WriteLine(" Zona A (Generador principal) crítica!");
+            if (s2 >= 70) Console.WriteLine(" Zona B (Sala de control) crítica!");
+            if (s3 >= 70) Console.WriteLine(" Zona C (Almacén combustible) crítica!");
+            if (s4 >= 70) Console.WriteLine(" Zona D (Transformadores) crítica!");
         }
 
         // 🔹 Sonido de alarma
@@ -197,15 +193,9 @@ namespace Version_2._0_Proyecto
         // 🔹 Animación de fuego en consola
         static void AnimarFuego()
         {
-            string[] fuego = { "🔥", "🔥🔥", "🔥🔥🔥", "🔥🔥🔥🔥", "🔥🔥🔥🔥🔥" };
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine();
-            for (int i = 0; i < fuego.Length; i++)
-            {
-                Console.WriteLine(fuego[i]);
-                Thread.Sleep(250);
-            }
-            Console.WriteLine("💦 Rociadores ACTIVADOS 💦");
+
+
+            Console.WriteLine(" Rociadores ACTIVADOS ");
             Console.ResetColor();
         }
 
@@ -213,7 +203,7 @@ namespace Version_2._0_Proyecto
         static void AnimarLlamada()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            string[] frames = { "📱📶 Llamando.", "📱📶 Llamando..", "📱📶 Llamando..." };
+            string[] frames = { " Llamando.", " Llamando..", " Llamando..." };
             for (int i = 0; i < 2; i++)
             {
                 foreach (string frame in frames)
@@ -223,7 +213,7 @@ namespace Version_2._0_Proyecto
                     Thread.Sleep(300);
                 }
             }
-            Console.WriteLine("\r📞 Conectado con bomberos...");
+            Console.WriteLine("\r Conectado con bomberos...");
             Thread.Sleep(800);
             Console.ResetColor();
         }
@@ -232,14 +222,9 @@ namespace Version_2._0_Proyecto
         static void AnimarBomberos()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            string[] frames = { "🚒", "🚒💨", "🚒💨💨", "🚒💨💨💨", "🚒💨💨💨💨" };
             Console.WriteLine();
-            foreach (var frame in frames)
-            {
-                Console.Write("\r" + frame);
-                Thread.Sleep(400);
-            }
-            Console.WriteLine("\r🚒 Los bomberos han llegado al sitio. ✅");
+
+            Console.WriteLine("\r Los bomberos han llegado al sitio. ");
             Thread.Sleep(1200);
             Console.ResetColor();
         }
@@ -255,17 +240,17 @@ namespace Version_2._0_Proyecto
             if (alarmaActiva)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("🚨 ALARMA: ACTIVADA");
-                Console.WriteLine("💡 Luces de emergencia: ENCENDIDAS");
-                Console.WriteLine("💦 Rociadores: ACTIVOS");
+                Console.WriteLine("ALARMA: ACTIVADA");
+                Console.WriteLine("Luces de emergencia: ENCENDIDAS");
+                Console.WriteLine("Rociadores: ACTIVOS");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("✅ Sistema operativo y sin alertas.");
-                Console.WriteLine("💡 Luces de emergencia: APAGADAS");
-                Console.WriteLine("💦 Rociadores: EN ESPERA");
+                Console.WriteLine("Sistema operativo y sin alertas.");
+                Console.WriteLine("Luces de emergencia: APAGADAS");
+                Console.WriteLine("Rociadores: EN ESPERA");
                 Console.ResetColor();
             }
 
