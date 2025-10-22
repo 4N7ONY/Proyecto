@@ -9,9 +9,31 @@ namespace Version_2._0_Proyecto
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            Random random = new Random();
+    
+            static void Main(string[] args)
+            {
+            
+                string claveCorrecta = "123456";
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("═══════════════════════════════════════════════════════════");
+                Console.WriteLine("       SISTEMA CONTRA INCENDIOS INTELIGENTE - SCI          ");
+                Console.WriteLine("═══════════════════════════════════════════════════════════");
+                Console.ResetColor();
+
+                Console.Write("\nIngrese contraseña: ");
+                string claveIngresada = Console.ReadLine();
+
+                if (claveIngresada != claveCorrecta)
+                {
+                    Console.WriteLine("\n Acceso denegado.");
+                    return;
+                }
+
+                Console.WriteLine("\n Acceso concedido.\n");
+                Thread.Sleep(1000);
+
+                Random random = new Random();
             bool alarmaActiva = false;
             int opcion;
             // Sensores
